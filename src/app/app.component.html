@@ -1,10 +1,7 @@
-<app-header></app-header>
+<app-header (featureSelected)="loadComponent($event)"></app-header>
 <div class='container'>
 	<div class='row'>
-		<div>
-			This is an angualr app !!
-      <app-recepies></app-recepies>
-      <app-shopping-list></app-shopping-list>
-		</div>
+    <div *ngIf="featureSelected === 'recipe'"><app-recepies></app-recepies></div>
+    <div *ngIf="featureSelected === 'shopping'"><app-shopping-list></app-shopping-list></div>
 	</div>
 </div>
