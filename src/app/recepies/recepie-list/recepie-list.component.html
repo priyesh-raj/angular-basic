@@ -1,15 +1,11 @@
-<hr/>
+<div class="row>">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recepie</button>
+  </div>
+</div>
 <div class="row">
   <div class="col-xs-12">
-    <a href="#" class="list-group-item clearfix" *ngFor="let recepie of recepies">
-      <div class="pull-left">
-        <h4 class="list-group-item-heading">{{ recepie.recepieName }}</h4>
-        <p class="list-group-item-text">{{ recepie.recepieDescription }}</p>
-      </div>
-      <span class="pull-right">
-        <img [src]="recepie.imgUrl" alt="{{ recepie.recepieName }}" class="img-responsive" style="{max-height:'50px'}">
-      </span>
-    </a>
+    <app-recepie-item  *ngFor="let recipeEl of recepies" []="recipeEl" ></app-recepie-item> 
   </div>
 </div>
 
