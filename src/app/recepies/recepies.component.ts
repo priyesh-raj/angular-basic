@@ -8,10 +8,12 @@ import { Recepie } from './recepie.model'
   styleUrls: ['./recepies.component.css']
 })
 export class RecepiesComponent implements OnInit {
-
+  selectedEl: Recepie
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSelectedRecepie(evtData) {
+    this.selectedEl = evtData
+  }
 }

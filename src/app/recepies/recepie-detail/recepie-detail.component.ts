@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Recepie } from './recepie.model'
+import { Recepie } from '../recepie.model'
 @Component({
   selector: 'app-recepie-detail',
   templateUrl: './recepie-detail.component.html',

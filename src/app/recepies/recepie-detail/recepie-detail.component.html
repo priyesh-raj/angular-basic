@@ -27,9 +27,11 @@
 <div class="row">
   <div class="col-xs-12">
      <span class="pull-right">
-        <img [src]="recepie.imgUrl" alt="{{ recepie.recepieName }}" class="img-responsive" style="{max-height:'50px'}">
+        <img [src]="elementDesc.imgUrl" alt="{{ elementDesc.recepieName }}" class="img-responsive" style="{max-height:'50px'}">
       </span>
-      
+      <br>
+      <input type="text" class="form-control" innerText="{{elementDesc.recepieName}}">
+      <input type="text" class="form-control" [innerText]="elementDesc.recepieDescription">      
   </div>
 </div>
 <div class="row">
