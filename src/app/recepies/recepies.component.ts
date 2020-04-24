@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
+import { Recepie } from './recepie.model'
 
 @Component({
   selector: 'app-recepies',
