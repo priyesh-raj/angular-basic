@@ -1,0 +1,1 @@
+export const imageUrl = https://cdn.pixabay.com/photo/2018/01/13/22/41/food-3080911_960_720.jpg

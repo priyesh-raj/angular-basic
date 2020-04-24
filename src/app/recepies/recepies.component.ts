@@ -14,6 +14,7 @@ export class RecepiesComponent implements OnInit {
   ngOnInit() {
   }
   onSelectedRecepie(evtData) {
+    console.log("From recipe component" +JSON.stringify(evtData))
     this.selectedEl = evtData
   }
 }
