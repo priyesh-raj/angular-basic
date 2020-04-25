@@ -8,8 +8,8 @@ import { Ingredients } from '../../shared/ingredients.model';
   styleUrls: ['./shopping-list-edit.component.css']
 })
 export class ShoppingListEditComponent implements OnInit {
-  @ViewChild('itemAdded') itemNameRef: ElementRef<string>
-  @ViewChild('amountAdded') amountRef: ElementRef<number>
+  @ViewChild('itemAdded') itemNameRef: ElementRef
+  @ViewChild('amountAdded') amountRef: ElementRef
   @Output() listAdd = new EventEmitter<any>()
   constructor() { }
 
@@ -17,7 +17,7 @@ export class ShoppingListEditComponent implements OnInit {
   }
 
   onAdd() {
-    this.listAdd.emit(new Ingredients(this.itemNameRef.nativeElement,this.amountRef.nativeElement) )
+    this.listAdd.emit(new Ingredients(this.itemNameRef.nativeElement.value,this.amountRef.nativeElement.value) )
   }
 
 }
