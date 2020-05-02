@@ -7,7 +7,7 @@ import { RecipeService } from './recipe.service'
   selector: 'app-recepies',
   templateUrl: './recepies.component.html',
   styleUrls: ['./recepies.component.css'],
-  providers : [RecipeService,]
+  providers: [RecipeService,]
 })
 export class RecepiesComponent implements OnInit {
   selectedEl: Recepie
@@ -20,5 +20,5 @@ export class RecepiesComponent implements OnInit {
       (recipe: Recepie) => {this.selectedEl = recipe}
     )
   }
-  
+
 }
