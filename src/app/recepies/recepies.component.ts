@@ -11,14 +11,14 @@ import { RecipeService } from './recipe.service'
 })
 export class RecepiesComponent implements OnInit {
   selectedEl: Recepie
-  constructor() { }
+  
+  constructor(private recipeservice: RecipeService) { }
 
   ngOnInit() {
+    this.recipeservice.recipeSelected
+    .subscribe(
+      (recipe: Recepie) => {this.selectedEl = recipe}
+    )
   }
-  onSelectedRecepie(evtData) {
-    console.log("From recipe component" +JSON.stringify(evtData))
-    this.selectedEl = evtData
-  }
-
-
+  
 }
