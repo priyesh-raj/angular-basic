@@ -5,8 +5,9 @@
 </div>
 <div class="row">
 	<div class="col-xs-12">
-		<app-recepie-item *ngFor="let recipeEl of recepies" [recepie]="recipeEl" (eleDetails)="selectedEl(recipeEl)">
-			<!-- (click)="onListClick($event.target.value)"> -->
+		<!--app-recepie-item *ngFor="let recipeEl of recepies" [recepie]="recipeEl" (eleDetails)="selectedEl(recipeEl)
+			 (click)="onListClick($event.target.value)">--> 
+    <app-recepie-item *ngFor="let recipeEl of recepies" [recepie]="recipeEl">
 		</app-recepie-item>
 	</div>
 </div>

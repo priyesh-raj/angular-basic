@@ -1,11 +1,13 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { Recepie } from './recepie.model'
+import { RecipeService } from './recipe.service'
 
 @Component({
   selector: 'app-recepies',
   templateUrl: './recepies.component.html',
-  styleUrls: ['./recepies.component.css']
+  styleUrls: ['./recepies.component.css'],
+  providers : [RecipeService,]
 })
 export class RecepiesComponent implements OnInit {
   selectedEl: Recepie
@@ -17,4 +19,6 @@ export class RecepiesComponent implements OnInit {
     console.log("From recipe component" +JSON.stringify(evtData))
     this.selectedEl = evtData
   }
+
+
 }
