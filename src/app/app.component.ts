@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  featureSelected: string
-  loadComponent(feature:string) {
-    this.featureSelected = feature
-  }
+  //featureSelected: string
+  
+  constructor() {}
+  // loadComponent(feature:string) {
+  //   this.featureSelected = feature
+  // }
 }
