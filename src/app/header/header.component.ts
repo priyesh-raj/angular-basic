@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   //@Output() featureSelected = new EventEmitter<string>()
-  constructor(private router:Router ) { }
+  constructor(private router:Router, private activatedRoute: ActivatedRoute ) { }
 
   ngOnInit() {
   }
   onSelect(feature:string) {
     //this.featureSelected.emit(feature)
     if(feature === 'shopping') {
-      this.router.navigate(['shopping-list'])
-    }this.router.navigate(['recipes'])
+      this.router.navigate(['shopping-list'], {relativeTo: this.activatedRoute})
+    }else {this.router.navigate(['recipes'], {relativeTo: this.activatedRoute})}
 
   }
 
