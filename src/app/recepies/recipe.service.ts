@@ -17,4 +17,10 @@ export class RecipeService {
     return this.recipes.slice()
   }
 
+  elementDesc(selectedItemName: string) {
+    for(let i=0; i<this.recipes.length; i++){
+      if(this.recipes[i].recepieName === selectedItemName) return this.recipes[i]
+    }
+  }
+
 }
